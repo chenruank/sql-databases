@@ -1,0 +1,55 @@
+-- #1
+SELECT * FROM artists;
+-- #2
+SELECT name FROM artists;
+-- #3
+SELECT
+	name,
+    bio,
+    created_at
+FROM artists;
+-- #4
+SELECT * FROM songs WHERE id % 2 = 0 and > 50
+SELECT * FROM songs WHERE id % 2 != 0 and < 10
+-- #5
+INSERT INTO albums 
+(
+  name,
+)  
+VALUES 
+(	
+  'Kelly', 
+  'Amber', 
+  'Jasmine',
+  'Erin',
+  'Stephanie',
+  'Andrew',
+  'Prentice',
+  'Morgan',
+  'Ai',
+  'Erica',
+  CURRENT_TIMESTAMP
+);
+-- #5
+UPDATE artists
+SET name = 'Kelly CR'
+	updated_at = CURRENT_TIMESTAMP
+WHERE id = 1;
+-- #6
+BEGIN TRANSACTION;
+	DELETE from User;
+    SELECT * from User;
+ROLLBACK;
+-- #7
+SELECT * User
+ADD * Favorite
+INSERT UserID
+	created_at = CURRENT_TIMESTAMP
+WHERE user
+-- #8
+begin TRANSACTION;
+	DELETE FROM Favorite WHERE FavoriteID % 2 != 0 and < 10
+    SELECT * FROM Favorite;
+ROLLBACK;
+-- #9
+SELECT * FROM Favorite;
